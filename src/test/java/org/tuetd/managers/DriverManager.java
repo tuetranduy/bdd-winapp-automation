@@ -1,5 +1,6 @@
 package org.tuetd.managers;
 
+import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.windows.WindowsDriver;
 import io.appium.java_client.windows.options.WindowsOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -44,7 +45,9 @@ public class DriverManager {
 
         WindowsDriver driver = null;
         WindowsOptions capabilities = new WindowsOptions();
-        capabilities.setCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
+        capabilities.setCapability("app", "SymplastAcquisitionInc.SymplastPractice_nttdm19prm2hj!App");
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "windows");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "windows");
 
         try {
             driver = new WindowsDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);

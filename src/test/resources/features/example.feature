@@ -1,7 +1,6 @@
 Feature: An example feature for example app
 
-  Scenario: The example app test case
-    Given Press one
-    When Press Plus
-    And Press Two
-    Then Result should be 3
+  Scenario: Symplast Practice app test case
+    Given Click Practice Name input
+    When Enter 'this is a practice name' to Practice Name input
+

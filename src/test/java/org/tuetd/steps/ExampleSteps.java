@@ -39,4 +39,19 @@ public class ExampleSteps {
         Assert.assertEquals(result, examplePage.getResult());
     }
 
+    @Given("Click Practice Name input")
+    public void clickPracticeName() {
+        ExamplePage examplePage = new ExamplePage();
+
+        examplePage.clickPracticeNameInput();
+    }
+
+    @When("^Enter '(.*)' to Practice Name input$")
+    public void enterToPracticeName(String input) {
+        ExamplePage examplePage = new ExamplePage();
+
+        examplePage.enterTextToPracticeNameInput(input);
+
+    }
+
 }
